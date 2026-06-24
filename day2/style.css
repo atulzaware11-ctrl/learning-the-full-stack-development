@@ -1,0 +1,30 @@
+* {
+    /* margin: 0; */
+    padding: 0;
+    background-color: white;
+
+}
+h1{
+        font-weight: bold;
+
+    color: rgb(59, 59, 195);
+    background-color: whitesmoke;
+    /* padding-top: 30; */
+    text-align: center;
+}
+strong{
+    /* borde  solid black; */
+    color: red;
+
+}
+#title {
+    color: rgb(128, 94, 0);
+}
+.text {
+    color: purple;
+}
+
+p {
+    font-size: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

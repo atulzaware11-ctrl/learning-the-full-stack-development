@@ -1,0 +1,463 @@
+
+/* ==========================================================
+   Day 4 - Advanced CSS
+   File : style.css
+   ========================================================== */
+
+/* ==========================================================
+   General Styling
+   ========================================================== */
+
+body {
+
+    /* Removes the browser's default spacing */
+    margin: 0;
+    padding: 0;
+
+    /* Changes the default font */
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* Centers most text */
+    text-align: center;
+
+}
+
+/* Styles all headings */
+h1 {
+
+    color: darkblue;
+
+    margin-top: 40px;
+
+}
+
+/* Horizontal Line */
+hr {
+
+    margin: 50px 0;
+
+}
+
+
+/* ==========================================================
+   Topic 1 : CSS Position Property
+   ========================================================== */
+
+.box {
+
+    /*
+    Meaning:
+    Creates a simple box.
+
+    Why?
+    Used to understand the default position (Static).
+
+    Remember:
+    Without position property,
+    every element is Static.
+    */
+
+    width: 220px;
+
+    height: 100px;
+
+    background: skyblue;
+
+    margin: 20px auto;
+
+    text-align: center;
+
+    line-height: 100px;
+
+}
+
+
+/* ==========================================================
+   Topic 2 : Position Relative
+   ========================================================== */
+
+.relative-box {
+
+    width: 220px;
+
+    height: 100px;
+
+    background: orange;
+
+    /*
+    Meaning:
+    Moves relative to its original position.
+
+    Why Important?
+    Creates a reference for Absolute elements.
+
+    Remember:
+    Relative = Moves itself.
+    */
+
+    position: relative;
+
+    top: 20px;
+
+    left: 50px;
+
+    text-align: center;
+
+    line-height: 100px;
+
+    transition: 0.5s;
+
+}
+
+.relative-box:hover {
+
+    /*
+    Enlarges the box smoothly.
+    */
+
+    transform: scale(1.1);
+
+}
+
+
+/* ==========================================================
+   Topic 3 : Position Absolute
+   ========================================================== */
+
+.parent {
+
+    /*
+    Meaning:
+    Parent container.
+
+    Why?
+    Child with absolute positioning
+    searches for this parent.
+
+    Remember:
+    Relative Parent
+           +
+    Absolute Child
+    */
+
+    position: relative;
+
+    width: 450px;
+
+    height: 250px;
+
+    background: lightgray;
+
+    margin: auto;
+
+    line-height: 250px;
+
+}
+
+.child {
+
+    /*
+    Meaning:
+    Leaves normal document flow.
+
+    Why?
+    Can be placed anywhere inside
+    the parent.
+
+    Remember:
+    Absolute searches for Relative.
+    */
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 20px;
+
+    width: 120px;
+
+    height: 60px;
+
+    background: crimson;
+
+    color: white;
+
+    text-align: center;
+
+    line-height: 60px;
+
+}
+
+
+/* ==========================================================
+   Topic 4 : Position Fixed
+   ========================================================== */
+
+.fixed-box {
+
+    /*
+    Meaning:
+    Always stays at one place
+    on the screen.
+
+    Why?
+    Used for chat buttons,
+    help buttons,
+    WhatsApp buttons.
+
+    Remember:
+    Fixed = Never moves.
+    */
+
+    position: fixed;
+
+    bottom: 20px;
+
+    right: 20px;
+
+    width: 120px;
+
+    height: 60px;
+
+    background: green;
+
+    color: white;
+
+    line-height: 60px;
+
+}
+
+
+/* ==========================================================
+   Topic 5 : Position Sticky
+   ========================================================== */
+
+.sticky-box {
+
+    /*
+    Meaning:
+    Behaves normally until scrolling.
+
+    Then sticks to the top.
+
+    Remember:
+    Sticky =
+    Relative + Fixed
+    */
+
+    position: sticky;
+
+    top: 0;
+
+    background: black;
+
+    color: white;
+
+    padding: 15px;
+
+    font-size: 20px;
+
+}
+
+
+/* ==========================================================
+   Topic 6 : z-index
+   ========================================================== */
+
+.red {
+
+    /*
+    Lower layer
+    */
+
+    width: 150px;
+
+    height: 150px;
+
+    background: red;
+
+    position: relative;
+
+    left: 100px;
+
+    z-index: 1;
+
+}
+
+.blue {
+
+    /*
+    Meaning:
+    Controls stacking order.
+
+    Why?
+    Higher z-index appears above.
+
+    Remember:
+    Bigger number
+    comes on top.
+    */
+
+    width: 150px;
+
+    height: 150px;
+
+    background: blue;
+
+    position: relative;
+
+    left: 180px;
+
+    bottom: 80px;
+
+    z-index: 2;
+
+}
+
+
+/* ==========================================================
+   Topic 7 : Transform
+   ========================================================== */
+
+.transform-box {
+
+    /*
+    Meaning:
+    Transform changes
+    the shape,
+    size,
+    position,
+    rotation.
+
+    Remember:
+    Transform changes appearance.
+    */
+
+    width: 220px;
+
+    height: 100px;
+
+    background: purple;
+
+    color: white;
+
+    margin: auto;
+
+    line-height: 100px;
+
+    transition: 0.5s;
+
+}
+
+.transform-box:hover {
+
+    /*
+    Enlarges the box.
+    */
+
+    transform: scale(1.2);
+
+}
+
+
+/* ==========================================================
+   Topic 8 : Transition
+   ========================================================== */
+
+.btn {
+
+    /*
+    Meaning:
+    Transition creates
+    smooth animation.
+
+    Why?
+    Without transition,
+    changes happen instantly.
+
+    Remember:
+    Transition = Smooth Effect.
+    */
+
+    padding: 15px 35px;
+
+    font-size: 18px;
+
+    border: none;
+
+    background: royalblue;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.5s;
+
+}
+
+.btn:hover {
+
+    background: darkblue;
+
+    transform: scale(1.1);
+
+}
+
+
+/* ==========================================================
+   Topic 9 : Animation
+   ========================================================== */
+
+.ball {
+
+    /*
+    Meaning:
+    Animation moves objects automatically.
+
+    Remember:
+    Animation uses Keyframes.
+    */
+
+    width: 80px;
+
+    height: 80px;
+
+    background: red;
+
+    border-radius: 50%;
+
+    position: relative;
+
+    margin: 30px auto;
+
+    animation: moveBall 3s infinite alternate;
+
+}
+
+
+/*
+Meaning:
+Defines animation steps.
+
+Remember:
+
+from --> starting point
+
+to --> ending point
+*/
+
+@keyframes moveBall {
+
+    from {
+
+        left: -200px;
+
+    }
+
+    to {
+
+        left: 200px;
+
+    }
+
+}

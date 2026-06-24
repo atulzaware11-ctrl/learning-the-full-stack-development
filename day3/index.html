@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>My Portfolio</title>
+
+    <style>
+        
+        /* WHAT: The universal selector targets EVERY element on the page. WHY: Used to reset default browser settings. REMEMBER: The asterisk (*) means "wildcard" or "everything" in tech. */
+        * {
+            /* WHAT: Removes default outside spacing. WHY: Browsers add uneven margins by default; this creates a clean slate. REMEMBER: Margin is the space OUTSIDE the element's border (like a front yard). */
+            margin: 0;
+            
+            /* WHAT: Removes default inside spacing. WHY: Prevents unwanted gaps inside elements. REMEMBER: Padding is the space INSIDE the element (like bubble wrap padding inside a shipping box). */
+            padding: 0;
+            
+            /* WHAT: Includes padding and borders in the element's total width/height. WHY: Stops boxes from growing larger when you add padding. REMEMBER: "Border-box keeps the box in bounds." */
+            box-sizing: border-box;
+        }
+
+        /* WHAT: Targets the main visible area of the webpage. WHY: Sets the default look for the entire page background and text. REMEMBER: The <body> is the physical flesh of the page. */
+        body {
+            /* WHAT: Sets the background to light gray. WHY: Softer on the eyes than pure white. REMEMBER: Hex codes (#f5f5f5) are digital paint colors. */
+            background-color: #f5f5f5;
+            
+            /* WHAT: Sets the default font type. WHY: Makes text readable; falls back to 'sans-serif' if Arial isn't available. REMEMBER: "Font-family" is the handwriting style of the page. */
+            font-family: Arial, sans-serif;
+            
+            /* WHAT: Centers all text horizontally. WHY: Creates a balanced, portfolio-style look. REMEMBER: Just like the "Center Align" button in MS Word. */
+            text-align: center;
+            
+            /* WHAT: Adds 30 pixels of space inside the body edges. WHY: Prevents content from touching the very edge of the screen. REMEMBER: Padding = inner cushion. */
+            padding: 30px;
+        }
+
+        /* WHAT: Targets the specific element with the ID "title". WHY: To style the main name heading uniquely. REMEMBER: The hashtag (#) means ID (a unique fingerprint). */
+        #title {
+            /* WHAT: Changes text color to a dark blue/gray. WHY: High contrast against the light background for readability. REMEMBER: "Color" in CSS always means TEXT color. */
+            color: #2c3e50;
+            
+            /* WHAT: Makes the text 42 pixels large. WHY: It's the most important text, so it needs to be big. REMEMBER: "Font-size" = how loud the text is shouting. */
+            font-size: 42px;
+            
+            /* WHAT: Adds 10 pixels of space below the title. WHY: Pushes the next element (the intro) down so they don't touch. REMEMBER: Margin-bottom is like pushing away what's beneath you. */
+            margin-bottom: 10px;
+        }
+
+        /* WHAT: Targets elements with the CLASS "intro". WHY: Styles the subtitle text. REMEMBER: A dot (.) means CLASS (a group of elements sharing a style). */
+        .intro {
+            /* WHAT: Sets text color to medium gray. WHY: Creates visual hierarchy (less important than the dark title). REMEMBER: Lighter colors = quieter visual voice. */
+            color: #555;
+            
+            /* WHAT: Sets text size to 20 pixels. WHY: Keeps it readable but smaller than the title. */
+            font-size: 20px;
+            
+            /* WHAT: Adds 20 pixels of space below the intro. WHY: Creates breathing room before the buttons start. */
+            margin-bottom: 20px;
+        }
+
+        /* WHAT: Targets the container holding the buttons. WHY: To add spacing around the whole group of buttons. */
+        .buttons {
+            /* WHAT: Adds 30 pixels of space below the button area. WHY: Separates the buttons from the navigation menu below them. */
+            margin-bottom: 30px;
+        }
+
+        /* WHAT: Targets all <button> tags. WHY: To make standard ugly browser buttons look modern and clickable. REMEMBER: Styling raw tags affects every single one on the page. */
+        button {
+            /* WHAT: Colors the button blue. WHY: Blue is universally recognized as a clickable color. */
+            background-color: #3498db;
+            
+            /* WHAT: Makes the text inside the button white. WHY: High contrast against the blue background. */
+            color: white;
+            
+            /* WHAT: Adds 12px vertical and 22px horizontal inner space. WHY: Makes the button chunky and easy to click. REMEMBER: Padding = Top/Bottom Left/Right. */
+            padding: 12px 22px;
+            
+            /* WHAT: Removes the default ugly black border. WHY: Modernizes the design. REMEMBER: "None" literally erases the border. */
+            border: none;
+            
+            /* WHAT: Rounds the corners by 8 pixels. WHY: Makes the button look friendly and modern. REMEMBER: "Radius" rounds the sharp edges. */
+            border-radius: 8px;
+            
+            /* WHAT: Changes the mouse arrow to a pointing hand. WHY: Tells the user "you can click this". REMEMBER: "Cursor: pointer" = pointing finger. */
+            cursor: pointer;
+            
+            /* WHAT: Adds 10 pixels of space around the outside of the button. WHY: Stops multiple buttons from sticking together. */
+            margin: 10px;
+            
+            /* WHAT: Makes any changes (like hovering) take 0.3 seconds. WHY: Creates a smooth animation instead of a sudden blink. REMEMBER: "Transition" is the animation speed. */
+            transition: 0.3s;
+        }
+
+        /* WHAT: Targets buttons ONLY when the mouse is hovering over them. WHY: Gives interactive feedback to the user. REMEMBER: ":hover" triggers when the mouse is on top. */
+        button:hover {
+            /* WHAT: Changes to a slightly darker blue. WHY: Visual proof that the button is reacting to the mouse. */
+            background-color: #2980b9;
+            
+            /* WHAT: Enlarges the button by 5%. WHY: Makes it "pop" out at the user. REMEMBER: "Scale(1.05)" means 105% of its original size. */
+            transform: scale(1.05);
+        }
+
+        /* WHAT: Targets all anchor tags (links). WHY: To clean up default link styles. REMEMBER: "a" stands for Anchor. */
+        a {
+            /* WHAT: Removes the default underline from links. WHY: Underlines look outdated; the button styling is enough. REMEMBER: "Text-decoration" controls underlines, overlines, etc. */
+            text-decoration: none;
+        }
+
+        /* WHAT: Targets unordered lists <ul> inside a <nav> tag. WHY: To style the skills menu. */
+        nav ul {
+            /* WHAT: Removes the default bullet points. WHY: We want them to look like cards, not a shopping list. REMEMBER: "List-style: none" kills the bullets. */
+            list-style: none;
+            
+            /* WHAT: Turns on Flexbox layout. WHY: Allows elements to sit side-by-side automatically. REMEMBER: Flexbox makes layouts flexible and easy to align. */
+            display: flex;
+            
+            /* WHAT: Centers the flex items horizontally. WHY: Keeps the skills list centered on the page. REMEMBER: "Justify-content" moves things along the main horizontal row. */
+            justify-content: center;
+            
+            /* WHAT: Adds a 20px gap between the flex items. WHY: Much easier than adding margins to every single item. REMEMBER: Gap is the literal empty space between flex items. */
+            gap: 20px;
+            
+            /* WHAT: Adds 30px space top/bottom, 0px left/right. WHY: Separates the list from elements above and below. */
+            margin: 30px 0;
+            
+            /* WHAT: Allows items to wrap to a new line if they run out of space. WHY: Prevents the list from breaking off the screen on small phones. REMEMBER: "Wrap" = wrap around to the next line. */
+            flex-wrap: wrap;
+        }
+
+        /* WHAT: Targets the individual list items (<li>) inside the navigation list. WHY: To style each skill like a card. */
+        nav ul li {
+            /* WHAT: Makes the background of the skill card white. WHY: Stands out against the light gray body background. */
+            background: white;
+            
+            /* WHAT: Adds inner cushion so text doesn't touch the edges. WHY: Makes it look like a physical card. */
+            padding: 12px 20px;
+            
+            /* WHAT: Rounds the card corners. WHY: Matches the button styles for consistency. */
+            border-radius: 8px;
+            
+            /* WHAT: Adds a soft shadow behind the card. WHY: Gives a 3D effect so it looks elevated. REMEMBER: X-offset, Y-offset, Blur, Color (rgba = Red Green Blue Alpha/Transparency). */
+            box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+            
+            /* WHAT: Makes hover effects smooth (0.3 seconds). WHY: Animations feel professional. */
+            transition: 0.3s;
+        }
+
+        /* WHAT: Styles the skill cards when hovered over. WHY: Interactive feedback. */
+        nav ul li:hover {
+            /* WHAT: Turns the card blue on hover. WHY: Matches the primary theme color. */
+            background: #3498db;
+            
+            /* WHAT: Turns the text white so it can be read on the blue background. */
+            color: white;
+            
+            /* WHAT: Moves the card UP by 5 pixels. WHY: Creates a physical "lifting" effect. REMEMBER: TranslateY moves things on the vertical (Y) axis. Negative goes UP. */
+            transform: translateY(-5px);
+        }
+
+        /* WHAT: Targets the horizontal rule line. WHY: To add spacing around the dividing line. */
+        hr {
+            /* WHAT: Adds 30px space above and below the line, 0 on sides. WHY: Gives the line breathing room. */
+            margin: 30px 0;
+        }
+
+        /* WHAT: Targets the container with the CLASS "about". WHY: To control the layout of the text paragraph. */
+        .about {
+            /* WHAT: Restricts the maximum width to 700 pixels. WHY: Long lines of text are hard to read; this keeps it narrow and neat. REMEMBER: "Max-width" is a speed limit for width. */
+            max-width: 700px;
+            
+            /* WHAT: Automatically calculates left/right margins. WHY: Perfectly centers the 700px box in the middle of the screen. REMEMBER: "Margin: auto" is the magic trick for centering blocks. */
+            margin: auto;
+        }
+
+        /* WHAT: Targets the heading 2 inside the "about" section. WHY: Styles the section title. */
+        .about h2 {
+            /* WHAT: Uses the dark blue/gray color. WHY: Matches the main title for consistency. */
+            color: #2c3e50;
+            
+            /* WHAT: Adds space below the heading. WHY: Separates it from the paragraph text. */
+            margin-bottom: 15px;
+        }
+
+        /* WHAT: Targets the paragraph inside the "about" section. WHY: Styles the reading text. */
+        .about p {
+            /* WHAT: Sets text size to 18px. WHY: Standard, readable size for paragraphs. */
+            font-size: 18px;
+            
+            /* WHAT: Increases the space between lines of text. WHY: Makes large blocks of text significantly easier to read. REMEMBER: "Line-height" is like double-spacing a school essay. */
+            line-height: 1.6;
+            
+            /* WHAT: Sets text color to medium gray. WHY: Pure black text can cause eye strain; dark gray is softer. */
+            color: #555;
+        }
+
+        /* WHAT: A Media Query that activates ONLY when the screen is 768px wide or smaller (like a tablet or phone). WHY: Makes the site mobile-friendly. REMEMBER: "@media" talks to the device screen. */
+        @media (max-width: 768px) {
+            
+            /* WHAT: Targets the skill list on mobile. */
+            nav ul {
+                /* WHAT: Changes the flexbox layout from a horizontal row to a vertical column. WHY: Phone screens are too narrow for rows. REMEMBER: "Column" stacks them like pancakes. */
+                flex-direction: column;
+            }
+
+            /* WHAT: Targets the main title on mobile. */
+            #title {
+                /* WHAT: Shrinks the font size to 32px. WHY: 42px is too big for a tiny phone screen and might break words in half. */
+                font-size: 32px;
+            }
+
+            /* WHAT: Targets the intro text on mobile. */
+            .intro {
+                /* WHAT: Shrinks the font to 18px. WHY: Scales down proportionally with the title. */
+                font-size: 18px;
+            }
+
+            /* WHAT: Targets buttons on mobile. */
+            button {
+                /* WHAT: Forces buttons to be exactly 180px wide. WHY: Makes them a uniform, easily tappable size for fingers. */
+                width: 180px;
+            }
+        }
+    /* WHAT: Closes the CSS style section. WHY: Tells the browser we are done writing CSS. */
+    </style>
+</head>
+
+<body>
+
+    <h1 id="title">Atul Zaware</h1>
+
+    <p class="intro">
+        Branch: Computer Engineering
+    </p>
+
+    <div class="buttons">
+        
+        <a href="https://github.com" target="_blank">
+            <button>GitHub</button>
+        </a>
+
+        <a href="https://www.linkedin.com" target="_blank">
+            <button>LinkedIn</button>
+        </a>
+        
+    </div>
+
+    <nav>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <section class="about">
+        
+        <h2>About Me</h2>
+
+        <p>
+            Hello! My name is Atul Zaware. I am a Computer Engineering student
+            passionate about Full Stack Development, Artificial Intelligence,
+            and Automation. I am currently learning HTML, CSS, JavaScript,
+            React, Node.js, and backend technologies to become a professional
+            Full Stack Developer.
+        </p>
+        
+    </section>
+
+</body>
+</html>

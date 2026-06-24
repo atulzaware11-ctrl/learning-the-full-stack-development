@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 6 - CSS Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Day 6 - CSS Grid Layout</h1>
+
+    <!-- Basic Grid -->
+    <section>
+        <h2>display: grid</h2>
+        <div class="container basic-grid">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+    </section>
+
+    <!-- Grid Columns -->
+    <section>
+        <h2>grid-template-columns</h2>
+        <div class="container columns-grid">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+    </section>
+
+    <!-- Grid Rows -->
+    <section>
+        <h2>grid-template-rows</h2>
+        <div class="container rows-grid">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+        </div>
+    </section>
+
+    <!-- Gap -->
+    <section>
+        <h2>gap</h2>
+        <div class="container gap-grid">
+            <div class="box">A</div>
+            <div class="box">B</div>
+            <div class="box">C</div>
+            <div class="box">D</div>
+        </div>
+    </section>
+
+    <!-- Column Span -->
+    <section>
+        <h2>grid-column</h2>
+        <div class="container column-span">
+            <div class="box span-column">Header</div>
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+    </section>
+
+    <!-- Row Span -->
+    <section>
+        <h2>grid-row</h2>
+        <div class="container row-span">
+            <div class="box span-row">A</div>
+            <div class="box">B</div>
+            <div class="box">C</div>
+            <div class="box">D</div>
+            <div class="box">E</div>
+        </div>
+    </section>
+
+    <!-- Grid Areas -->
+    <section>
+        <h2>grid-template-areas</h2>
+        <div class="container area-grid">
+            <div class="header">Header</div>
+            <div class="sidebar">Sidebar</div>
+            <div class="content">Content</div>
+            <div class="footer">Footer</div>
+        </div>
+    </section>
+
+    <!-- Justify Items -->
+    <section>
+        <h2>justify-items</h2>
+        <div class="container justify-items-grid">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+    </section>
+
+    <!-- Align Items -->
+    <section>
+        <h2>align-items</h2>
+        <div class="container align-items-grid">
+            <div class="box">1</div>
+            <div class="box tall">2</div>
+            <div class="box">3</div>
+        </div>
+    </section>
+
+</body>
+</html>
