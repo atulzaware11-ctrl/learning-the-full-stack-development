@@ -1,0 +1,34 @@
+Interview Questions
+Beginner
+What is Express.js?
+Why do we use Express instead of the Node.js http module?
+What does app.listen() do?
+Explain the difference between req and res.
+What is a route?
+What is middleware?
+Why is next() important?
+What is express.json() used for?
+What are route parameters?
+What are query parameters?
+Intermediate
+Explain the Express request lifecycle.
+What happens if next() is not called in middleware?
+When would you use route parameters versus query parameters?
+How does Express match incoming requests to routes?
+Why is project structure important in larger applications?
+Practice Tasks
+Create routes:
+/
+/about
+/contact
+Create a route:
+/students/:id
+Return the ID sent in the URL.
+Create a search route:
+/search?course=node
+Return the query object.
+Add a logging middleware that prints every request method and URL.
+Extend the mini CRUD app by adding:
+GET /students
+POST /students
+GET /students/:id

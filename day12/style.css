@@ -1,0 +1,40 @@
+/* ===========================================
+        DAY 12
+        MODERN JAVASCRIPT
+=========================================== */
+
+/* Remove default margin */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+/* Body Styling */
+
+body{
+
+    background:#ecf0f1;
+
+    font-family:Arial;
+
+    padding:40px;
+
+}
+
+/* Main Heading */
+
+h1{
+
+    text-align:center;
+
+    color:#2c3e50;
+
+    margin-bottom:30px;
+
+}

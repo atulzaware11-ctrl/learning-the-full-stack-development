@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="dashboard">
+    <h1>🎓 Student Management Dashboard</h1>
+
+    <div class="nav-links">
+        <a class="nav-btn active" href="index.html">Dashboard</a>
+        <a class="nav-btn" href="student-list.html">Student List</a>
+        <a class="nav-btn" href="search.html">Search</a>
+    </div>
+
+    <div class="form-container">
+        <h2>Add Student</h2>
+
+        <input type="text" id="studentName" placeholder="Enter Student Name">
+        <br><br>
+
+        <input type="number" id="studentMarks" placeholder="Enter Student Marks">
+        <br><br>
+
+        <button id="addBtn">Add Student</button>
+
+        <br><br>
+
+        <div class="search-actions">
+            <input type="text" id="searchInput" placeholder="Search Student">
+            <button id="searchBtn" type="button">Search</button>
+        </div>
+    </div>
+
+    <div class="student-container">
+        <h2>Student List</h2>
+        <div id="studentList"></div>
+    </div>
+
+    <div class="statistics">
+        <h2>Dashboard Statistics</h2>
+        <p><strong>Total Students :</strong> <span id="totalStudents">0</span></p>
+        <p><strong>Average Marks :</strong> <span id="averageMarks">0</span></p>
+        <p><strong>Topper :</strong> <span id="topStudent">None</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

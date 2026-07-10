@@ -1,0 +1,23 @@
+/* Remove Default Margin */
+
+body{
+
+    margin:0;
+
+    padding:30px;
+
+    font-family:Arial;
+
+    background:#f4f4f4;
+
+    text-align:center;
+
+}
+
+/* Heading */
+
+h1{
+
+    color:#2c3e50;
+
+}

@@ -1,0 +1,12 @@
+const logger = (req, res, next)=>{
+    const currentTime = new Date().toLocaleString();
+       console.log("========== Incoming Request ==========");
+    console.log(`Time   : ${currentTime}`);
+    console.log(`Method : ${req.method}`);
+    console.log(`URL    : ${req.originalUrl}`);
+    console.log("======================================");
+
+next();
+};
+
+module.exports = logger;

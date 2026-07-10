@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Students</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="search">
+    <h1>🔎 Search Students</h1>
+
+    <div class="nav-links">
+        <a class="nav-btn" href="index.html">Dashboard</a>
+        <a class="nav-btn" href="student-list.html">Student List</a>
+        <a class="nav-btn active" href="search.html">Search</a>
+    </div>
+
+    <div class="form-container">
+        <h2>Find Student</h2>
+        <div class="search-actions">
+            <input type="text" id="searchInput" placeholder="Search Student">
+            <button id="searchBtn" type="button">Search</button>
+        </div>
+    </div>
+
+    <div class="student-container">
+        <h2>Search Results</h2>
+        <div id="studentList"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

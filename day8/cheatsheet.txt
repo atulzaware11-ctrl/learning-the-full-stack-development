@@ -1,0 +1,35 @@
+// Run file
+node app.js
+
+// Initialize project
+npm init -y
+
+// Install package
+npm install express
+
+// Import module
+const fs = require("fs");
+
+// Export
+module.exports = add;
+
+// Read file
+fs.readFileSync("a.txt", "utf8");
+
+// Write file
+fs.writeFileSync("a.txt", "Hello");
+
+// Append
+fs.appendFileSync("a.txt", " World");
+
+// Delete
+fs.unlinkSync("a.txt");
+
+// Create server
+const http = require("http");
+
+const server = http.createServer((req, res) => {
+  res.end("Hello");
+});
+
+server.listen(3000);
