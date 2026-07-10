@@ -1,0 +1,25 @@
+Common Interview Questions
+Beginner
+What is an API?
+What is REST?
+What is the difference between REST and an API?
+What are CRUD operations?
+Which HTTP method is used to create data?
+Why is express.json() required?
+What is the difference between PUT and PATCH?
+What is the purpose of HTTP status codes?
+What is the difference between req.params, req.query, and req.body?
+Why should REST URLs use nouns instead of verbs?
+Intermediate
+Explain the complete lifecycle of a REST request from the client to the server.
+When should you return 201 Created instead of 200 OK?
+How would you design consistent API responses for success and error cases?
+Why is input validation important before processing req.body?
+How would you organize routes as an API grows?
+Practice Exercises
+Add a course field to each student and return it in responses.
+Implement PATCH /students/:id to update only the provided fields.
+Return 404 if a requested student index doesn't exist.
+Add a route GET /students/search?name=Alice that filters students by name.
+Add a route DELETE /students that clears all students.
+Return responses in the format { success, message, data } for every endpoint.
